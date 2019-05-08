@@ -16,7 +16,7 @@
     </div>
     @endif()
     
-
+   
     
     <!-- Begin page -->
     <div id="wrapper">
@@ -79,17 +79,13 @@
                         <div class="col-md-12" >
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">l'apprenant : {{$student->prenom }} {{$student->nom }}</h3>
+                                    <h3 class="panel-title">l'apprenant : {{$student->prenom }} {{$student->nom }}, Tel: {{$student->mobile }}, Email: {{$student->email }}</h3>
                                 </div>
+                              Carte d’identité: <a href="{{url('images', $student->file) }}" title="pdf">Download the catalog here (.pdf)</a> <br>
 
-                                <tr>
-                                
-                                    <td><b><embed src="{{url('/images/',$student->file) }}" style="width:980px; height:800px"></b></td>
-
-
-                                </tr>
-                                
-                                
+                              Dernier diplôme ou attestation de formation: <a href="{{url('images', $student->carte) }}" title="pdf">Download the catalog here (.pdf)</a>                                
+                               
+                               
                             </div>
                         </div>
                         

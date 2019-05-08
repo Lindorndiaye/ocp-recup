@@ -92,7 +92,9 @@ class StudentController extends Controller
         //Student::create($data);
         $this->validate($request, [
             'file' => 'required',
-            'file.*' => 'mimes:doc,pdf,docx,zip,png,jpeg,odt,jpg'
+            'file.*' => 'mimes:doc,pdf,docx,zip,png,jpeg,odt,jpg,svc,csv',
+            'carte.*' => 'mimes:doc,pdf,docx,zip,png,jpeg,odt,jpg,svc,csv'
+
 
         ]);
 
@@ -108,28 +110,31 @@ class StudentController extends Controller
             $name=$file->getClientOriginalName();
 
             $file->move(public_path().'/images/', $name);  
-
-            $data[] = $name;  
-
         }
-
      }
 
-     $students = new Student();
-     $students->prenom = $request->prenom;
-     $students->nom = $request->nom;
-     $students->age = $request->age;
-     $students->email = $request->email;
-     $students->specialite = $request->specialite;
-     $students->mobile = $request->mobile;
-     $students->region = $request->region;
-     $students->ville = $request->ville;
-     $students->diplome = $request->diplome;
-     $students->diplomem = $request->diplomem;
-     $students->file=json_encode($data);
-     $students->save();
-     Session::flash('message', ' added successfully');
-     return redirect('/students');
+
+        $image = $request->file('carte');
+        if($image){
+        $imageName=$image->getClientOriginalName();
+        $image->move(public_path().'/images/', $imageName);
+        }
+        $students = new Student();
+        $students->prenom = $request->prenom;
+        $students->nom = $request->nom;
+        $students->age = $request->age;
+        $students->email = $request->email;
+        $students->specialite = $request->specialite;
+        $students->mobile = $request->mobile;
+        $students->region = $request->region;
+        $students->ville = $request->ville;
+        $students->diplome = $request->diplome;
+        $students->diplomem = $request->diplomem;
+        $students->file = $name;
+        $students->carte = $imageName;
+        $students->save();
+        Session::flash('message', ' added successfully');
+        return redirect('/students');
 
        
     }

@@ -14,7 +14,7 @@
 
   {{csrf_field()}}
    <div class="form-group" >
-        {!! Form::label('prenom', 'Prenom'); !!}
+        {!! Form::label('prenom', 'Prenom'); !!}  
         {!! Form::text('prenom', null, ['class' => 'form-control']); !!}
     </div>
     <div class="form-group">
@@ -100,17 +100,18 @@
      </select>
 </div>
 
-    <div class="input-group hdtuto control-group lst increment" >
+    <div class="form-group" >
+{!! Form::label('Carte d’identité', 'Carte d’identité'); !!}
 
-<input type="file" name="file[]" class="myfrm form-control">
+<input type="file" name="file[]" class="myfrm form-control"><br>
 
-<div class="input-group-btn"> 
-
-  <button class="btn btn-success" type="button"><i class="fldemo glyphicon glyphicon-plus"></i>Add</button>
 
 </div>
 
-</div>
+<div class="form-group">
+        {!! Form::label('Dernier diplôme ou attestation de formation', 'Dernier diplôme ou attestation de formation') !!}
+        <input type="file" name="carte" class="myfrm form-control">
+    </div>
 
 <div class="clone hide">
 
@@ -143,7 +144,7 @@
 
       var lsthmtl = $(".clone").html();
 
-      $(".increment").after(lsthmtl);
+      $(".increment").after(lsthmtl);  
 
   });
 
