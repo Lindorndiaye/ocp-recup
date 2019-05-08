@@ -79,13 +79,22 @@
                         <div class="col-md-12" >
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">l'apprenant : {{$student->prenom }} {{$student->nom }}, Tel: {{$student->mobile }}, Email: {{$student->email }}</h3>
+                                    <h3 class="panel-title">L'apprenant: {!! $student->prenom !!} {!! $student->nom !!}</h3>
                                 </div>
-                              Carte d’identité: <a href="{{url('images', $student->file) }}" title="pdf">Download the catalog here (.pdf)</a> <br>
 
-                              Dernier diplôme ou attestation de formation: <a href="{{url('images', $student->carte) }}" title="pdf">Download the catalog here (.pdf)</a>                                
-                               
-                               
+                                <tr>
+                                    <td><b><embed src="{{url('images',$student->file) }}" style="width:980px; height:800px"></b></td>
+                                    <td><b><embed src="{{url('images',$student->carte) }}" style="width:980px; height:800px"></b></td>
+
+                                </tr>
+                                
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                      
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -101,6 +110,7 @@
 
 
         </div>
+
         <!-- ============================================================== -->
         <!-- End Right content here -->
         <!-- ============================================================== -->

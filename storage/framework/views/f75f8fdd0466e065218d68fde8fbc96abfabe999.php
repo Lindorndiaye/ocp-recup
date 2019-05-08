@@ -14,7 +14,7 @@
     </div>
     <?php endif; ?>
     
-
+   
     
     <!-- Begin page -->
     <div id="wrapper">
@@ -67,17 +67,22 @@
                         <div class="col-md-12" >
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">l'apprenant : <?php echo e($student->prenom); ?> <?php echo e($student->nom); ?></h3>
+                                    <h3 class="panel-title">L'apprenant: <?php echo $student->prenom; ?> <?php echo $student->nom; ?></h3>
                                 </div>
 
                                 <tr>
-                                
-                                    <td><b><embed src="<?php echo e(url('/images/',$student->file)); ?>" style="width:980px; height:800px"></b></td>
-
+                                    <td><b><embed src="<?php echo e(url('images',$student->file)); ?>" style="width:980px; height:800px"></b></td>
+                                    <td><b><embed src="<?php echo e(url('images',$student->carte)); ?>" style="width:980px; height:800px"></b></td>
 
                                 </tr>
                                 
-                                
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                      
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -93,6 +98,7 @@
 
 
         </div>
+
         <!-- ============================================================== -->
         <!-- End Right content here -->
         <!-- ============================================================== -->

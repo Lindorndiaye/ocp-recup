@@ -15,8 +15,7 @@
   <?php echo e(csrf_field()); ?>
 
    <div class="form-group" >
-        <?php echo Form::label('prenom', 'Prenom');; ?>
-
+        <?php echo Form::label('prenom', 'Prenom');; ?>  
         <?php echo Form::text('prenom', null, ['class' => 'form-control']);; ?>
 
     </div>
@@ -117,17 +116,20 @@
      </select>
 </div>
 
-    <div class="input-group hdtuto control-group lst increment" >
+    <div class="form-group" >
+<?php echo Form::label('Carte d’identité', 'Carte d’identité');; ?>
 
-<input type="file" name="file[]" class="myfrm form-control">
 
-<div class="input-group-btn"> 
+<input type="file" name="file[]" class="myfrm form-control"><br>
 
-  <button class="btn btn-success" type="button"><i class="fldemo glyphicon glyphicon-plus"></i>Add</button>
-
-</div>
 
 </div>
+
+<div class="form-group">
+        <?php echo Form::label('Dernier diplôme ou attestation de formation', 'Dernier diplôme ou attestation de formation'); ?>
+
+        <input type="file" name="carte" class="myfrm form-control">
+    </div>
 
 <div class="clone hide">
 
@@ -148,7 +150,7 @@
     
 
    
-   <button type="submit" class="btn btn-success" style="margin-top:10px">Submit</button>
+   <button type="submit" class="btn btn-success" style="margin-top:10px">S'inscrire</button>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -160,7 +162,7 @@
 
       var lsthmtl = $(".clone").html();
 
-      $(".increment").after(lsthmtl);
+      $(".increment").after(lsthmtl);  
 
   });
 

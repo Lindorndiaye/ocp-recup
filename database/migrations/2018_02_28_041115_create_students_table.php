@@ -26,6 +26,7 @@ class CreateStudentsTable extends Migration
             $table->string('diplome');
             $table->string('diplomem');
             $table->string('file');
+            $table->string('carte');
            
             
             $table->timestamps();
