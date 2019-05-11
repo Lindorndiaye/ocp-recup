@@ -76,19 +76,19 @@
                                                 <thead>
                                                     <tr>
                                                         
-                                                        <th>Prenom</th>
-                                                        <th>Nom</th>
-                                                        <th>Age</th>
-                                                        <th>Email</th>
-                                                        <th>Specialité</th>
-                                                        <th>Telephone</th>
-                                                        <th>Region</th>
-                                                        <th>Ville</th>
-                                                        <th>Diplome</th>
-                                                        <th>Diplome en mode</th>
-                                                        <th>File</th>
+                                                        <th style="font-size:12px;">Prenom</th>
+                                                        <th style="font-size:12px;">Nom</th>
+                                                        <th style="font-size:12px;">Age</th>
+                                                        <th style="font-size:12px;">Email</th>
+                                                        <th style="font-size:12px;">Specialité</th>
+                                                        <th style="font-size:12px;">Telephone</th>
+                                                        <th style="font-size:12px;">Region</th>
+                                                        <th style="font-size:12px;">Ville</th>
+                                                        <th style="font-size:12px;">Diplome</th>
+                                                        <th style="font-size:12px;">Diplome en mode</th>
+                                                        <th style="font-size:12px;">File</th>
 
-                                                        <th width="100px;">Action</th>
+                                                        <th style="font-size:12px;">Action</th>
                                                     </tr>
                                                     </thead>
 
@@ -97,24 +97,24 @@
                                                     <?php $__currentLoopData = $students; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $student): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <tr>
                 
-                <td><a href="<?php echo e(route('participant.show', $student->id)); ?>"><b><?php echo $student->prenom; ?></b></a></td>
-                <td><b><?php echo $student->nom; ?></b></td>
-                <td><b><?php echo $student->age; ?></b></td>
-                <td><b><?php echo $student->email; ?></b></td>
-                <td><b><?php echo $student->specialite; ?></b></td>
-                <td><b><?php echo $student->mobile; ?></b></td>
-                <td><b><?php echo $student->region; ?></b></td>
-                <td><b><?php echo $student->ville; ?></b></td>
-                <td><b><?php echo $student->diplome; ?></b></td>
-                <td><b><?php echo $student->diplomem; ?></b></td>
-                <td><a href="<?php echo e(route('participant.show', $student->id)); ?>"><b><?php echo $student->file; ?></a></b></td>
+                <td style="font-size:12px;"><!-- <a href="<?php echo e(route('participant.show', $student->id)); ?>">--><b><?php echo $student->prenom; ?></b></a></td> 
+                <td style="font-size:12px;"><b><?php echo $student->nom; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $student->age; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $student->email; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $student->specialite; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $student->mobile; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $student->region; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $student->ville; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $student->diplome; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $student->diplomem; ?></b></td>
+                <td style="font-size:12px;"><a href="<?php echo e(route('participant.show', $student->id)); ?>"><b>Dossier</a></b></td>
                 
-                <td>
-                    <a class="btn btn-success btn-sm" href="students/<?php echo $student->id; ?>/edit">Modifier / Details</a>
+                <td style="font-size:12px;">
+                    <a class="btn btn-success btn-sm" href="students/<?php echo $student->id; ?>/edit">Modifier</a>
                     
                     <?php echo Form::open(['id' => 'deleteForm', 'method' => 'DELETE', 'url' => '/students/' . $student->id]); ?>
 
-                    
+                    <?php echo Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']); ?> 
                     <?php echo Form::close(); ?>
 
                 </td>

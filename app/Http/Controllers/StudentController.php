@@ -31,7 +31,7 @@ class StudentController extends Controller
         $students = request('students');
         return view('students.create',['students' => $students]);
     }
-
+  
     /**
      * Store a newly created resource in storage.
      *
@@ -92,8 +92,8 @@ class StudentController extends Controller
         //Student::create($data);
         $this->validate($request, [
             'file' => 'required',
-            'file.*' => 'mimes:doc,pdf,docx,zip,png,jpeg,odt,jpg,svc,csv',
-            'carte.*' => 'mimes:doc,pdf,docx,zip,png,jpeg,odt,jpg,svc,csv'
+            'file.*' => 'mimes:doc,pdf,docx,zip,png,jpeg,odt,jpg,svc,csv,mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts',
+            'carte.*' => 'mimes:doc,pdf,docx,zip,png,jpeg,odt,jpg,svc,csvmpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts'
 
 
         ]);

@@ -87,7 +87,22 @@
                                     <td><b><embed src="{{url('images',$student->carte) }}" style="width:980px; height:800px"></b></td>
 
                                 </tr>
+                                <tr>
+                                <td>
+                               
+                                <video controls width="500">
+
+                    
+                                    <source src="{{url('images',$student->carte) }}"
+                                            type="video/mp4">
+                                            
+                                </video>
+                                <a href="{{url('images',$student->carte) }}" rel="nofollow">Download</a>
+
+                                </td>
+                                </tr>
                                 
+
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
