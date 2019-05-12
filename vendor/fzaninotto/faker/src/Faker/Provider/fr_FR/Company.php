@@ -291,7 +291,7 @@ class Company extends \Faker\Provider\Company
         'Finance',
         'Flaconneur',
         'Foreur pétrole',
-        'Formateur d\'italien',
+        'Enseignant d\'italien',
         'Fossoyeur',
         'Fraiseur',
         'Fraiseur mouliste',

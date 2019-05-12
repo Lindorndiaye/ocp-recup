@@ -3,10 +3,10 @@
 <?php $__env->startSection('content'); ?>
 
     <h2>Read Data</h2>
-    <hr/>
+    <hr/>  
 <!-- <a class="btn btn-primary" href="generate-pdf" style="margin-bottom: 15px; float:right">contrat</a> -->
 
-    <a class="btn btn-primary" href="formateurs/create" style="margin-bottom: 15px;">Ajouter un formateur</a>
+    <a class="btn btn-primary" href="enseignants/create" style="margin-bottom: 15px;">Ajouter un Enseignant</a>
 
     <?php if(Session::has('message')): ?>
     <div class="alert-custom">
@@ -67,7 +67,7 @@
                         <div class="col-md-12" >
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Liste des nos formateurs: <?php echo e(count($formateurs)); ?> inscrits</h3>
+                                    <h3 class="panel-title">Liste des nos enseignants: <?php echo e(count($enseignants)); ?> inscrits</h3>
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
@@ -94,25 +94,25 @@
 
                                          
                                                 <tbody>
-                                                    <?php $__currentLoopData = $formateurs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $formateur): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                    <?php $__currentLoopData = $enseignants; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $Enseignant): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <tr>
                 
-                <td style="font-size:12px;"><!-- <a href="<?php echo e(route('participant.show', $formateur->id)); ?>">--><b><?php echo $formateur->prenom; ?></b></a></td> 
-                <td style="font-size:12px;"><b><?php echo $formateur->nom; ?></b></td>
-                <td style="font-size:12px;"><b><?php echo $formateur->age; ?></b></td>
-                <td style="font-size:12px;"><b><?php echo $formateur->email; ?></b></td>
-                <td style="font-size:12px;"><b><?php echo $formateur->specialite; ?></b></td>
-                <td style="font-size:12px;"><b><?php echo $formateur->mobile; ?></b></td>
-                <td style="font-size:12px;"><b><?php echo $formateur->region; ?></b></td>
-                <td style="font-size:12px;"><b><?php echo $formateur->ville; ?></b></td>
-                <td style="font-size:12px;"><b><?php echo $formateur->diplome; ?></b></td>
-                <td style="font-size:12px;"><b><?php echo $formateur->diplomem; ?></b></td>
-                <td style="font-size:12px;"><a href="<?php echo e(route('formateur.show', $formateur->id)); ?>"><b>Dossier</a></b></td>
+                <td style="font-size:12px;"><!-- <a href="<?php echo e(route('participant.show', $Enseignant->id)); ?>">--><b><?php echo $Enseignant->prenom; ?></b></a></td> 
+                <td style="font-size:12px;"><b><?php echo $Enseignant->nom; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $Enseignant->age; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $Enseignant->email; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $Enseignant->specialite; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $Enseignant->mobile; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $Enseignant->region; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $Enseignant->ville; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $Enseignant->diplome; ?></b></td>
+                <td style="font-size:12px;"><b><?php echo $Enseignant->diplomem; ?></b></td>
+                <td style="font-size:12px;"><a href="<?php echo e(route('Enseignant.show', $Enseignant->id)); ?>"><b>Dossier</a></b></td>
                 
                 <td style="font-size:12px;">
-                    <a class="btn btn-success btn-sm" href="formateurs/<?php echo $formateur->id; ?>/edit">Modifier</a>
+                    <a class="btn btn-success btn-sm" href="enseignants/<?php echo $Enseignant->id; ?>/edit">Modifier</a>
                     
-                    <?php echo Form::open(['id' => 'deleteForm', 'method' => 'DELETE', 'url' => '/formateurs/' . $formateur->id]); ?>
+                    <?php echo Form::open(['id' => 'deleteForm', 'method' => 'DELETE', 'url' => '/enseignants/' . $Enseignant->id]); ?>
 
                     <?php echo Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']); ?> 
                     <?php echo Form::close(); ?>

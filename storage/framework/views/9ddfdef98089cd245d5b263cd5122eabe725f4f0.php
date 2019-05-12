@@ -4,38 +4,38 @@
 
     <h2>Update Data</h2>
     <hr/>
-    <a class="btn btn-primary" href="/formateurs" style="margin-bottom: 15px;">Revenir à la liste</a>
+    <a class="btn btn-primary" href="/enseignants" style="margin-bottom: 15px;">Revenir à la liste</a>
 
-    <?php echo Form::open(['id' => 'dataForm', 'method' => 'PATCH', 'url' => '/formateurs/' . $formateur->id ]); ?>
+    <?php echo Form::open(['id' => 'dataForm', 'method' => 'PATCH', 'url' => '/enseignants/' . $Enseignant->id ]); ?>
 
     <div class="form-group">
         <?php echo Form::label('prenom', 'Prenom');; ?>
 
-        <?php echo Form::text('prenom', $formateur->prenom ,['class' => 'form-control']);; ?>
+        <?php echo Form::text('prenom', $Enseignant->prenom ,['class' => 'form-control']);; ?>
 
     </div>
     <div class="form-group">
         <?php echo Form::label('nom', 'Nom');; ?>
 
-        <?php echo Form::text('nom', $formateur->nom ,['class' => 'form-control']);; ?>
+        <?php echo Form::text('nom', $Enseignant->nom ,['class' => 'form-control']);; ?>
 
     </div>
     <div class="form-group">
         <?php echo Form::label('age', 'Age');; ?>
 
-        <?php echo Form::number('age', $formateur->age ,['class' => 'form-control']);; ?>
+        <?php echo Form::number('age', $Enseignant->age ,['class' => 'form-control']);; ?>
 
     </div>
     <div class="form-group">
         <?php echo Form::label('mobile', 'Telephone');; ?>
 
-        <?php echo Form::text('mobile', $formateur->mobile ,['class' => 'form-control']);; ?>
+        <?php echo Form::text('mobile', $Enseignant->mobile ,['class' => 'form-control']);; ?>
 
     </div>
     <div class="form-group">
         <?php echo Form::label('email', 'Email'); ?>
 
-        <?php echo Form::email('email', $formateur->email, ['placeholder' => 'Enter email', 'class' => 'form-control']);; ?>
+        <?php echo Form::email('email', $Enseignant->email, ['placeholder' => 'Enter email', 'class' => 'form-control']);; ?>
 
     </div>
 
@@ -70,7 +70,7 @@
 <div class="form-group">
         <?php echo Form::label('ville', 'Ville'); ?>
 
-        <?php echo Form::text('ville', $formateur->ville, ['class' => 'form-control']);; ?>
+        <?php echo Form::text('ville', $Enseignant->ville, ['class' => 'form-control']);; ?>
 
     </div>
     <!-- <div class="form-group">

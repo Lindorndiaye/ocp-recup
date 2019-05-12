@@ -4,8 +4,8 @@
     <hr/>
 <!-- <a class="btn btn-primary" href="generate-pdf" style="margin-bottom: 15px; float:right">contrat</a> -->
 
-    <!-- <a class="btn btn-primary" href="formateurs/create" style="margin-bottom: 15px;">Ajouter un étudiant</a> -->
-    <a class="btn btn-primary" href="/formateurs" style="margin-bottom: 15px;">Retourner</a>
+    <!-- <a class="btn btn-primary" href="enseignants/create" style="margin-bottom: 15px;">Ajouter un étudiant</a> -->
+    <a class="btn btn-primary" href="/enseignants" style="margin-bottom: 15px;">Retourner</a>
 
 
     <?php if(Session::has('message')): ?>
@@ -67,12 +67,12 @@
                         <div class="col-md-12" >
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Le formateur: <?php echo $formateur->prenom; ?> <?php echo $formateur->nom; ?></h3>
+                                    <h3 class="panel-title">Le Enseignant: <?php echo $Enseignant->prenom; ?> <?php echo $Enseignant->nom; ?></h3>
                                 </div>
 
                                 <tr>
-                                    <td><b><embed src="<?php echo e(url('images',$formateur->file)); ?>" style="width:980px; height:800px"></b></td>
-                                    <td><b><embed src="<?php echo e(url('images',$formateur->carte)); ?>" style="width:980px; height:800px"></b></td>
+                                    <td><b><embed src="<?php echo e(url('images',$Enseignant->file)); ?>" style="width:980px; height:800px"></b></td>
+                                    <td><b><embed src="<?php echo e(url('images',$Enseignant->carte)); ?>" style="width:980px; height:800px"></b></td>
 
                                 </tr>
                                 <tr>
@@ -81,11 +81,11 @@
                                 <video controls width="500">
 
                     
-                                    <source src="<?php echo e(url('images',$formateur->carte)); ?>"
+                                    <source src="<?php echo e(url('images',$Enseignant->carte)); ?>"
                                             type="video/mp4">
                                             
                                 </video>
-                                <a href="<?php echo e(url('images',$formateur->carte)); ?>" rel="nofollow">Download</a>
+                                <a href="<?php echo e(url('images',$Enseignant->carte)); ?>" rel="nofollow">Download</a>
 
                                 </td>
                                 </tr>

@@ -20,7 +20,7 @@ Route::get('generate-pdf','HomeController@generatePDF');
 
 Route::resource('students', 'StudentController');
 
-Route::resource('formateurs', 'FormateurController');
+Route::resource('enseignants', 'EnseignantController');
 
 
 //Route::POST('upload', 'StudentController@upload')->name('file.upload');
@@ -28,7 +28,7 @@ Route::resource('formateurs', 'FormateurController');
 
 Route::get('participant/{id}', 'StudentController@participant')->name('participant.show');
 
-Route::get('formateur/{id}', 'FormateurController@formateur')->name('formateur.show');
+Route::get('Enseignant/{id}', 'EnseignantController@Enseignant')->name('Enseignant.show');
 
 
 Route::get('/contrat', function () {

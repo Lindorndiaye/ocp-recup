@@ -3,14 +3,14 @@
 <?php $__env->startSection('content'); ?>
 
 
-    <h2>Ajouter un formateur</h2>
+    <h2>Ajouter un Enseignant</h2>
     <hr/>
-    <a class="btn btn-primary" href="/formateurs" style="margin-bottom: 15px;">Revenir à la liste</a>
+    <a class="btn btn-primary" href="/enseignants" style="margin-bottom: 15px;">Revenir à la liste</a>
     
     
-
+  
     
-    <form method="post" action="<?php echo e(route('formateurs.store')); ?>" enctype="multipart/form-data" style="width:350px; text-align:center; margin-left:430px;">
+    <form method="post" action="<?php echo e(route('enseignants.store')); ?>" enctype="multipart/form-data" style="width:350px; text-align:center; margin-left:430px;">
 
   <?php echo e(csrf_field()); ?>
 
