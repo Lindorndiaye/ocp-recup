@@ -100,18 +100,47 @@
      </select>
 </div>
 
-    <div class="form-group" >
-{!! Form::label('Carte d’identité', 'Carte d’identité'); !!}
-
-<input type="file" name="file[]" class="myfrm form-control"><br>
-
-
-</div>
-
 <div class="form-group">
-        {!! Form::label('Dernier diplôme ou attestation de formation', 'Dernier diplôme ou attestation de formation') !!}
-        <input type="file" name="carte" class="myfrm form-control">
-    </div>
+        {!! Form::label('adressed', 'Adresse Domicile') !!}
+        {!! Form::text('adressed', null, ['class' => 'form-control']); !!}
+</div>
+<div class="form-group">
+        {!! Form::label('adressea', 'Adresse Entreprise ou Atelier') !!}
+        {!! Form::text('adressea', null, ['class' => 'form-control']); !!}
+</div>
+<div class="form-group">
+        {!! Form::label('nf', 'Niveau langue francaise') !!}
+        <div>
+    <input type="radio" name="nf" value="passable">
+    <label for="contactChoice1">Passable</label>
+    <input type="radio" name="nf" value="moyen">
+    <label for="contactChoice2">Moyen</label>
+    <input type="radio" name="nf" value="assezbien">
+    <label for="contactChoice3">Assez bien</label>
+    <input type="radio" name="nf" value="bien">
+    <label for="contactChoice4">Bien</label>
+  </div>
+</div>
+<div class="form-group">
+        {!! Form::label('em', 'Avez vous participer a un evenement de mode( defilé ou fashion-week )') !!}
+         <div>
+    <input type="radio" name="em" value="oui">
+    <label for="contactChoice1">Oui</label>
+    <input type="radio" name="em" value="non">
+    <label for="contactChoice2">Non</label>
+    
+  
+</div>
+</div>
+<div class="form-group">
+        {!! Form::label('nin', "Numero d'identité national") !!}
+        {!! Form::text('nin', null, ['class' => 'form-control']); !!}
+</div>
+<div class="form-group">
+        {!! Form::label('nd', 'Intitule du dernier diplome obtenu') !!}
+        {!! Form::text('nd', null, ['class' => 'form-control']); !!}
+</div>
+  
 
 <div class="clone hide">
 

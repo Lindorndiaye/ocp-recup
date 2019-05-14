@@ -82,26 +82,84 @@
                                     <h3 class="panel-title">L'apprenant: {!! $student->prenom !!} {!! $student->nom !!}</h3>
                                 </div>
 
-                                <tr>
-                                    <td><b><embed src="{{url('images',$student->file) }}" style="width:980px; height:800px"></b></td>
-                                    <td><b><embed src="{{url('images',$student->carte) }}" style="width:980px; height:800px"></b></td>
-
-                                </tr>
-                                <tr>
-                                <td>
-                               
-                                <video controls width="500">
-
-                    
-                                    <source src="{{url('images',$student->carte) }}"
-                                            type="video/mp4">
-                                            
-                                </video>
-                                <a href="{{url('images',$student->carte) }}" rel="nofollow">Download</a>
-
-                                </td>
-                                </tr>
+                                <div class="row" >
+                        <div class="col-md-12" >
+                            <div class="panel panel-default">
                                 
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <table id="datatable-buttons" class="table table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nom : {!! $student->nom !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Prenom : {!! $student->prenom !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Age : {!! $student->age !!} ans</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Telephone : {!! $student->mobile !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Email : {!! $student->email !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Specialité : {!! $student->specialite !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Region : {!! $student->region !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Ville : {!! $student->ville !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Diplome : {!! $student->diplome !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Diplome en mode: {!! $student->diplomem !!}</th>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <th>Adresse Domicile: {!! $student->adressed !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Adresse Atelier ou Entreprise: {!! $student->adressea !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Niveau langue francaise: {!! $student->nf !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>participation a un evenement de mode( defilé ou fashion-week ): {!! $student->em !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Numero d'identité national: {!! $student->nin !!}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Intitule du dernier diplome obtenu: {!! $student->nd !!}</th>
+                                                    </tr>
+                                                    
+                                                </thead>
+
+                                         
+                                                <tbody>
+                                                   
+          
+     
+
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                   
+                            </div>
+                        </div>
+                        
+                    </div> <!-- End Row -->
+
+
+
+
 
                                 <div class="panel-body">
                                     <div class="row">

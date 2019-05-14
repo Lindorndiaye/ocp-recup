@@ -70,12 +70,85 @@
                                     <h3 class="panel-title">L'apprenant: <?php echo $student->prenom; ?> <?php echo $student->nom; ?></h3>
                                 </div>
 
-                                <tr>
-                                    <td><b><embed src="<?php echo e(url('images',$student->file)); ?>" style="width:980px; height:800px"></b></td>
-                                    <td><b><embed src="<?php echo e(url('images',$student->carte)); ?>" style="width:980px; height:800px"></b></td>
-
-                                </tr>
+                                <div class="row" >
+                        <div class="col-md-12" >
+                            <div class="panel panel-default">
                                 
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <table id="datatable-buttons" class="table table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nom : <?php echo $student->nom; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Prenom : <?php echo $student->prenom; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Age : <?php echo $student->age; ?> ans</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Telephone : <?php echo $student->mobile; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Email : <?php echo $student->email; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Specialité : <?php echo $student->specialite; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Region : <?php echo $student->region; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Ville : <?php echo $student->ville; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Diplome : <?php echo $student->diplome; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Diplome en mode: <?php echo $student->diplomem; ?></th>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <th>Adresse Domicile: <?php echo $student->adressed; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Adresse Atelier ou Entreprise: <?php echo $student->adressea; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Niveau langue francaise: <?php echo $student->nf; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>participation a un evenement de mode( defilé ou fashion-week ): <?php echo $student->em; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Numero d'identité national: <?php echo $student->nin; ?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Intitule du dernier diplome obtenu: <?php echo $student->nd; ?></th>
+                                                    </tr>
+                                                    
+                                                </thead>
+
+                                         
+                                                <tbody>
+                                                   
+          
+     
+
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                   
+                            </div>
+                        </div>
+                        
+                    </div> <!-- End Row -->
+
+
+
+
+
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -292,5 +365,4 @@
 
 
 <?php $__env->stopSection(); ?>
-
 <?php echo $__env->make('templates.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
