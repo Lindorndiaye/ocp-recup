@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('content'); ?>
 
-
+   
     <h2>Ajouter un étudiant</h2>
     <hr/>
     <a class="btn btn-primary" href="/students" style="margin-bottom: 15px;">Revenir à la liste</a>
@@ -78,9 +78,24 @@
 <div class="form-group">
         <?php echo Form::label('ville', 'Ville'); ?>
 
-        <?php echo Form::text('ville', null, ['class' => 'form-control']);; ?>
-
-    </div>
+        <select class="form-control m-bot15" name="ville">
+        
+        <option id="dakar">Dakar</option>
+        <option id="thies">Thies</option>  
+        <option id="louga">Louga</option> 
+        <option id="saint-l">Saint-louis</option>  
+        <option id="fatick">Fatick</option>
+        <option id="kaolack">Kaolack</option>
+        <option id="zig">Ziguinchor</option>
+       </select> 
+       <p id="dak">Guediawaye, Pikine, Parcelle, Rufisque, Dakar</p>
+       <p id="thie">keur cheikh, angle laobé, mbour</p>
+       <p id="loug">louga, niambour, keur mor</p>
+       <p id="saint">ndar, rue 18, keur ndiaye</p>
+       <p id="fatik">sine, koumpentoum, bourou</p>
+       <p id="kaol">saloum, ndiobene, galobe</p>
+       <p id="zi">casamance, sediou, wilingara</p>
+  </div>
     
 
    <div class="form-group">
@@ -210,6 +225,81 @@
 
   });
 
+
+</script>
+
+<script>
+    $('#dak').hide();
+    $('#thie').hide();
+    $('#loug').hide();
+    $('#saint').hide();
+    $('#fatik').hide();
+    $('#kaol').hide();
+    $('#zi').hide();
+
+$('#dakar').click(function(){
+        $('#dak').show();
+        $('#thie').hide();
+        $('#loug').hide();
+        $('#saint').hide();
+        $('#fatik').hide();
+        $('#kaol').hide();
+        $('#zi').hide();
+        });
+$('#thies').click(function(){
+        $('#dak').hide();
+        $('#thie').show();
+        $('#loug').hide();
+        $('#saint').hide();
+        $('#fatik').hide();
+        $('#kaol').hide();
+        $('#zi').hide();
+});
+$('#louga').click(function(){
+        $('#dak').hide();
+        $('#thie').hide();
+        $('#loug').show();
+        $('#saint').hide();
+        $('#fatik').hide();
+        $('#kaol').hide();
+        $('#zi').hide();
+});
+$('#saint-l').click(function(){
+        $('#dak').hide();
+        $('#thie').hide();
+        $('#loug').hide();
+        $('#saint').show();
+        $('#fatik').hide();
+        $('#kaol').hide();
+        $('#zi').hide();
+});
+$('#fatick').click(function(){
+        $('#dak').hide();
+        $('#thie').hide();
+        $('#loug').hide();
+        $('#saint').hide();
+        $('#fatik').show();
+        $('#kaol').hide();
+        $('#zi').hide();
+});
+$('#kaolack').click(function(){
+        $('#dak').hide();
+        $('#thie').hide();
+        $('#loug').hide();
+        $('#saint').hide();
+        $('#fatik').hide();
+        $('#kaol').show();
+        $('#zi').hide();
+});
+$('#zig').click(function(){
+        $('#dak').hide();
+        $('#thie').hide();
+        $('#loug').hide();
+        $('#saint').hide();
+        $('#fatik').hide();
+        $('#kaol').hide();
+        $('#zi').show();
+});
 
 </script>
 <?php $__env->stopSection(); ?>

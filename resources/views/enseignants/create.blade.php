@@ -60,7 +60,7 @@
         <option id="fatick">Fatick</option>
         <option id="kaolack">Kaolack</option>
         <option id="zig">Ziguinchor</option>
-       </select>    </div>
+       </select>   
        <p id="dak">Guediawaye, Pikine, Parcelle, Rufisque, Dakar</p>
        <p id="thie">keur cheikh, angle laobé, mbour</p>
        <p id="loug">louga, niambour, keur mor</p>
@@ -68,7 +68,7 @@
        <p id="fatik">sine, koumpentoum, bourou</p>
        <p id="kaol">saloum, ndiobene, galobe</p>
        <p id="zi">casamance, sediou, wilingara</p>
-
+</div>
 
    <div class="form-group">
         {!! Form::label('renseigner votre derniere diplome', 'Renseigner votre derniere Diplôme'); !!}
