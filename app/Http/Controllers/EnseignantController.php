@@ -9,7 +9,7 @@ use function Psy\debug;
 use PDF;  
 
 class EnseignantController extends Controller
-{
+{  
     /**
      * Display a listing of the resource.
      *
