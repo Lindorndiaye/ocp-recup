@@ -38,38 +38,82 @@
     <div class="form-group">
         {!! Form::label('region', 'Région'); !!}
        
-    <select class="form-control m-bot15" name="region">
-        
-      <option >Dakar</option> 
-      <option >Thies</option>  
-      <option >Louga</option> 
-      <option >Saint-louis</option>  
-      <option >Fatick</option>
-      <option >Kaolack</option>
-      <option >Ziguinchor</option>
+    <select class="form-control m-bot15" name="region" id="region">
+      <option id="n">-- --</option>
+      <option id="d">Dakar</option> 
+      <option id="t">Thies</option>  
+      <option id="l">Louga</option> 
+      <option id="s">Saint-louis</option>  
+      <option id="f">Fatick</option>
+      <option id="k">Kaolack</option>
+      <option id="z">Ziguinchor</option>
      </select>
 </div>
-<div class="form-group">
+<!-----------------------------------ville---------------------------->
+<div class="form-group"  id="dakar" >
         {!! Form::label('ville', 'Ville') !!}
         <select class="form-control m-bot15" name="ville">
-        
-        <option id="dakar">Dakar</option>
-        <option id="thies">Thies</option>  
-        <option id="louga">Louga</option> 
-        <option id="saint-l">Saint-louis</option>  
-        <option id="fatick">Fatick</option>
-        <option id="kaolack">Kaolack</option>
-        <option id="zig">Ziguinchor</option>
-       </select>   
-       <p id="dak">Guediawaye, Pikine, Parcelle, Rufisque, Dakar</p>
-       <p id="thie">keur cheikh, angle laobé, mbour</p>
-       <p id="loug">louga, niambour, keur mor</p>
-       <p id="saint">ndar, rue 18, keur ndiaye</p>
-       <p id="fatik">sine, koumpentoum, bourou</p>
-       <p id="kaol">saloum, ndiobene, galobe</p>
-       <p id="zi">casamance, sediou, wilingara</p>
-</div>
-
+        <option>D1</option>
+        <option>D2</option>
+        <option>D3</option>
+        <option>D4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="thies" >
+        {!! Form::label('ville', 'Ville') !!}
+        <select class="form-control m-bot15" name="ville">
+        <option>T1</option>
+        <option>T2</option>
+        <option>T3</option>
+        <option>T4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="louga" >
+        {!! Form::label('ville', 'Ville') !!}
+        <select class="form-control m-bot15" name="ville">
+        <option>L1</option>
+        <option>L2</option>
+        <option>L3</option>
+        <option>L4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="saint" >
+        {!! Form::label('ville', 'Ville') !!}
+        <select class="form-control m-bot15" name="ville">
+        <option>S1</option>
+        <option>S2</option>
+        <option>S3</option>
+        <option>S4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="fatick" >
+        {!! Form::label('ville', 'Ville') !!}
+        <select class="form-control m-bot15" name="ville">
+        <option>F1</option>
+        <option>F2</option>
+        <option>F3</option>
+        <option>F4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="kaolack" >
+        {!! Form::label('ville', 'Ville') !!}
+        <select class="form-control m-bot15" name="ville">
+        <option>K1</option>
+        <option>K2</option>
+        <option>K3</option>
+        <option>K4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="zig" >
+        {!! Form::label('ville', 'Ville') !!}
+        <select class="form-control m-bot15" name="ville">
+        <option>Z1</option>
+        <option>Z2</option>
+        <option>Z3</option>
+        <option>Z4</option> 
+       </select> 
+ </div>
+<!-----------------------------------ville-fin--------------------------->   
    <div class="form-group">
         {!! Form::label('renseigner votre derniere diplome', 'Renseigner votre derniere Diplôme'); !!}
        
@@ -141,77 +185,87 @@
 </script>
 
 <script>
-    $('#dak').hide();
-    $('#thie').hide();
-    $('#loug').hide();
+    $('#dakar').hide();
+    $('#thies').hide();
+    $('#louga').hide();
     $('#saint').hide();
-    $('#fatik').hide();
-    $('#kaol').hide();
-    $('#zi').hide();
+    $('#fatick').hide();
+    $('#kaolack').hide();
+    $('#zig').hide();
 
-$('#dakar').click(function(){
-        $('#dak').show();
-        $('#thie').hide();
-        $('#loug').hide();
+$('#n').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').hide();
         $('#saint').hide();
-        $('#fatik').hide();
-        $('#kaol').hide();
-        $('#zi').hide();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').hide();
+});
+$('#d').click(function(){
+        $('#dakar').show();
+        $('#thies').hide();
+        $('#louga').hide();
+        $('#saint').hide();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').hide();
         });
-$('#thies').click(function(){
-        $('#dak').hide();
-        $('#thie').show();
-        $('#loug').hide();
+$('#t').click(function(){
+        $('#dakar').hide();
+        $('#thies').show();
+        $('#louga').hide();
         $('#saint').hide();
-        $('#fatik').hide();
-        $('#kaol').hide();
-        $('#zi').hide();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').hide();
 });
-$('#louga').click(function(){
-        $('#dak').hide();
-        $('#thie').hide();
-        $('#loug').show();
+$('#l').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').show();
         $('#saint').hide();
-        $('#fatik').hide();
-        $('#kaol').hide();
-        $('#zi').hide();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').hide();
 });
-$('#saint-l').click(function(){
-        $('#dak').hide();
-        $('#thie').hide();
-        $('#loug').hide();
+$('#s').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').hide();
         $('#saint').show();
-        $('#fatik').hide();
-        $('#kaol').hide();
-        $('#zi').hide();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').hide();
 });
-$('#fatick').click(function(){
-        $('#dak').hide();
-        $('#thie').hide();
-        $('#loug').hide();
+$('#f').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').hide();
         $('#saint').hide();
-        $('#fatik').show();
-        $('#kaol').hide();
-        $('#zi').hide();
+        $('#fatick').show();
+        $('#kaolack').hide();
+        $('#zig').hide();
 });
-$('#kaolack').click(function(){
-        $('#dak').hide();
-        $('#thie').hide();
-        $('#loug').hide();
+$('#k').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').hide();
         $('#saint').hide();
-        $('#fatik').hide();
-        $('#kaol').show();
-        $('#zi').hide();
+        $('#fatick').hide();
+        $('#kaolack').show();
+        $('#zig').hide();
 });
-$('#zig').click(function(){
-        $('#dak').hide();
-        $('#thie').hide();
-        $('#loug').hide();
+$('#z').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').hide();
         $('#saint').hide();
-        $('#fatik').hide();
-        $('#kaol').hide();
-        $('#zi').show();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').show();
 });
+
 
 </script>
 @endsection()

@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('content'); ?>
 
-
+   
     <h2>Ajouter un étudiant</h2>
     <hr/>
     <a class="btn btn-primary" href="/students" style="margin-bottom: 15px;">Revenir à la liste</a>
@@ -64,24 +64,89 @@
         <?php echo Form::label('region', 'Région');; ?>
 
        
-    <select class="form-control m-bot15" name="region">
-        
-      <option >Dakar</option> 
-      <option >Thies</option>  
-      <option >Louga</option> 
-      <option >Saint-louis</option>  
-      <option >Fatick</option>
-      <option >Kaolack</option>
-      <option >Ziguinchor</option>
+    <select class="form-control m-bot15" name="region" id="region">
+      <option id="n">-- --</option>
+      <option id="d">Dakar</option> 
+      <option id="t">Thies</option>  
+      <option id="l">Louga</option> 
+      <option id="s">Saint-louis</option>  
+      <option id="f">Fatick</option>
+      <option id="k">Kaolack</option>
+      <option id="z">Ziguinchor</option>
      </select>
 </div>
-<div class="form-group">
+<!-----------------------------------ville---------------------------->
+<div class="form-group"  id="dakar" >
         <?php echo Form::label('ville', 'Ville'); ?>
 
-        <?php echo Form::text('ville', null, ['class' => 'form-control']);; ?>
+        <select class="form-control m-bot15" name="ville">
+        <option>D1</option>
+        <option>D2</option>
+        <option>D3</option>
+        <option>D4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="thies" >
+        <?php echo Form::label('ville', 'Ville'); ?>
 
-    </div>
-    
+        <select class="form-control m-bot15" name="ville">
+        <option>T1</option>
+        <option>T2</option>
+        <option>T3</option>
+        <option>T4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="louga" >
+        <?php echo Form::label('ville', 'Ville'); ?>
+
+        <select class="form-control m-bot15" name="ville">
+        <option>L1</option>
+        <option>L2</option>
+        <option>L3</option>
+        <option>L4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="saint" >
+        <?php echo Form::label('ville', 'Ville'); ?>
+
+        <select class="form-control m-bot15" name="ville">
+        <option>S1</option>
+        <option>S2</option>
+        <option>S3</option>
+        <option>S4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="fatick" >
+        <?php echo Form::label('ville', 'Ville'); ?>
+
+        <select class="form-control m-bot15" name="ville">
+        <option>F1</option>
+        <option>F2</option>
+        <option>F3</option>
+        <option>F4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="kaolack" >
+        <?php echo Form::label('ville', 'Ville'); ?>
+
+        <select class="form-control m-bot15" name="ville">
+        <option>K1</option>
+        <option>K2</option>
+        <option>K3</option>
+        <option>K4</option> 
+       </select> 
+ </div>
+ <div class="form-group"  id="zig" >
+        <?php echo Form::label('ville', 'Ville'); ?>
+
+        <select class="form-control m-bot15" name="ville">
+        <option>Z1</option>
+        <option>Z2</option>
+        <option>Z3</option>
+        <option>Z4</option> 
+       </select> 
+ </div>
+<!-----------------------------------ville-fin--------------------------->    
 
    <div class="form-group">
         <?php echo Form::label('diplome', 'Diplôme');; ?>
@@ -209,6 +274,92 @@
       $('#removed').remove();
 
   });
+
+
+</script>
+
+<script>
+    $('#dakar').hide();
+    $('#thies').hide();
+    $('#louga').hide();
+    $('#saint').hide();
+    $('#fatick').hide();
+    $('#kaolack').hide();
+    $('#zig').hide();
+
+
+$('#n').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').hide();
+        $('#saint').hide();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').hide();
+});
+$('#d').click(function(){
+        $('#dakar').show();
+        $('#thies').hide();
+        $('#louga').hide();
+        $('#saint').hide();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').hide();
+        });
+$('#t').click(function(){
+        $('#dakar').hide();
+        $('#thies').show();
+        $('#louga').hide();
+        $('#saint').hide();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').hide();
+});
+$('#l').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').show();
+        $('#saint').hide();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').hide();
+});
+$('#s').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').hide();
+        $('#saint').show();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').hide();
+});
+$('#f').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').hide();
+        $('#saint').hide();
+        $('#fatick').show();
+        $('#kaolack').hide();
+        $('#zig').hide();
+});
+$('#k').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').hide();
+        $('#saint').hide();
+        $('#fatick').hide();
+        $('#kaolack').show();
+        $('#zig').hide();
+});
+$('#z').click(function(){
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').hide();
+        $('#saint').hide();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').show();
+});
 
 
 </script>
