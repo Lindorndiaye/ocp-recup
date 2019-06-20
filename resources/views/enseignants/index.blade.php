@@ -2,18 +2,18 @@
 
 @section('content')
 
+
     <h2>Read Data</h2>
     <hr/>  
-<!-- <a class="btn btn-primary" href="generate-pdf" style="margin-bottom: 15px; float:right">contrat</a> -->
-
-    <a class="btn btn-primary" href="enseignants/create" style="margin-bottom: 15px;">Ajouter un Enseignant</a>
+<a class="btn btn-primary" href="http://ocpdakar.org/laravel/public/home" style="margin-bottom: 15px; float:right">Retour</a> 
+    <a class="btn btn-primary" href="http://ocpdakar.org/laravel/public/enseignants/create" style="margin-bottom: 15px;">Ajouter un Enseignant</a>
 
     @if(Session::has('message'))
     <div class="alert-custom">
         <p>{!! Session('message') !!}</p>
     </div>
     @endif()
-    
+   
 
     
     <!-- Begin page -->
@@ -125,8 +125,8 @@
                 <td style="font-size:12px;">
                     <a class="btn btn-success btn-sm" href="enseignants/{!! $Enseignant->id !!}/edit">Modifier</a>
                     
-                    {!! Form::open(['id' => 'deleteForm', 'method' => 'DELETE', 'url' => '/enseignants/' . $Enseignant->id]) !!}
-                    {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!} 
+                    <!-- {!! Form::open(['id' => 'deleteForm', 'method' => 'DELETE', 'url' => '/enseignants/' . $Enseignant->id]) !!}
+                    {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}  -->
                     {!! Form::close() !!}
                 </td>
                 

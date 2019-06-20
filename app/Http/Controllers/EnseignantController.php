@@ -22,6 +22,57 @@ class EnseignantController extends Controller
         return view('enseignants.index', ['enseignants' => $enseignants]);
     }
 
+    public function ajouter()
+    {
+        //
+        $enseignants = request('enseignants');
+        return view('enseignants.ajouter',['enseignants' => $enseignants]);
+    }
+
+    public function ajouter_entreprise(Request $request)
+    {
+        //
+        $message = "Ajouté avec succès";
+        $this->validate($request, [
+            'cv_file' => 'required',
+            'cv_file.*' => 'mimes:doc,pdf,docx,zip,png,jpeg,odt,jpg,svc,csv,mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts',
+
+
+        ]);
+ 
+        $image = $request->file('cv_file');
+        if($image){
+        $imageName = $image->getClientOriginalName();
+        $image->move(public_path().'/images/', $imageName);
+
+            
+        }
+
+        $enseignant = new Enseignant();
+        $enseignant->prenom = $request->prenom;
+        $enseignant->nom = $request->nom;
+        $enseignant->age = $request->age;
+        $enseignant->email = $request->email;
+        $enseignant->mobile = $request->mobile;
+        $enseignant->region = $request->region;
+        $enseignant->ville = $request->ville;
+        $enseignant->deniere_diplome = $request->deniere_diplome;
+        $enseignant->année_exper = $request->année_exper;
+        $enseignant->experience = $request->experience;
+        $enseignant->ecole = $request->ecole;
+        $enseignant->localite = $request->localite;
+        $enseignant->num_cni = $request->num_cni;
+        $enseignant->cv_file = $imageName;
+        $enseignant->save();
+
+
+        
+        Session::flash('message', ' added successfully');
+        return redirect('http://ocpdakar.org/');
+
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -69,7 +120,9 @@ class EnseignantController extends Controller
      if($image){
      $imageName=$image->getClientOriginalName();
      $image->move(public_path().'/images/', $imageName);
-     }
+
+     
+     } 
 
         $enseignants = new Enseignant();
         $enseignants->prenom = $request->prenom;
@@ -86,7 +139,7 @@ class EnseignantController extends Controller
         $enseignants->cv_file = $imageName;
         $enseignants->save();
         Session::flash('message', ' added successfully');
-        return redirect('/enseignants');
+        return redirect('http://ocpdakar.org/');
 
     }
 

@@ -15,24 +15,24 @@
   {{csrf_field()}}
    <div class="form-group" >
         {!! Form::label('prenom', 'Prenom'); !!}  
-        {!! Form::text('prenom', null, ['class' => 'form-control']); !!}
+        {!! Form::text('prenom', null, ['required','class' => 'form-control']); !!}
     </div>
     <div class="form-group">
         {!! Form::label('nom', 'Nom'); !!}
-        {!! Form::text('nom', null, ['class' => 'form-control']); !!}
+        {!! Form::text('nom', null, ['required','class' => 'form-control']); !!}
     </div>
     <div class="form-group">
         {!! Form::label('age', 'Age'); !!}
-        {!! Form::number('age', null, ['class' => 'form-control']); !!}
+        {!! Form::number('age', null, ['required','class' => 'form-control']); !!}
     </div>
     <div class="form-group">
         {!! Form::label('mobile', 'Telephone'); !!}
-        {!! Form::text('mobile', null, [ 'class' => 'form-control']); !!}
+        {!! Form::text('mobile', null, ['required','class' => 'form-control']); !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('email', 'Email') !!}
-        {!! Form::email('email', null, ['class' => 'form-control']); !!}
+        {!! Form::email('email', null, ['required','class' => 'form-control']); !!}
     </div>
     
 
@@ -64,68 +64,64 @@
      </select>
 </div>
 <!-----------------------------------ville---------------------------->
+<div id="vil">
 <div class="form-group"  id="dakar" >
         {!! Form::label('ville', 'Ville') !!}
         <select class="form-control m-bot15" name="ville">
-        <option>D1</option>
-        <option>D2</option>
-        <option>D3</option>
-        <option>D4</option> 
+        <option>Dakar</option>
+        <option>Pikine</option>
+        <option>Guediawaye</option>
+        <option>Rufisque</option> 
        </select> 
  </div>
  <div class="form-group"  id="thies" >
         {!! Form::label('ville', 'Ville') !!}
         <select class="form-control m-bot15" name="ville">
-        <option>T1</option>
-        <option>T2</option>
-        <option>T3</option>
-        <option>T4</option> 
+        <option>Thies</option>
+        <option>Mbour</option>
+        <option>Tivaouane</option>
        </select> 
  </div>
  <div class="form-group"  id="louga" >
         {!! Form::label('ville', 'Ville') !!}
         <select class="form-control m-bot15" name="ville">
-        <option>L1</option>
-        <option>L2</option>
-        <option>L3</option>
-        <option>L4</option> 
+        <option>Louga</option>
+        <option>Kebemer</option>
+        <option>Linguere</option>
        </select> 
  </div>
  <div class="form-group"  id="saint" >
         {!! Form::label('ville', 'Ville') !!}
         <select class="form-control m-bot15" name="ville">
-        <option>S1</option>
-        <option>S2</option>
-        <option>S3</option>
-        <option>S4</option> 
+        <option>Saint-Louis</option>
+        <option>Dagana</option>
+        <option>Podor</option> 
        </select> 
  </div>
  <div class="form-group"  id="fatick" >
         {!! Form::label('ville', 'Ville') !!}
         <select class="form-control m-bot15" name="ville">
-        <option>F1</option>
-        <option>F2</option>
-        <option>F3</option>
-        <option>F4</option> 
+        <option>Fatick</option>
+        <option>Foundiougne</option>
+        <option>Gossas</option>
        </select> 
  </div>
  <div class="form-group"  id="kaolack" >
         {!! Form::label('ville', 'Ville') !!}
         <select class="form-control m-bot15" name="ville">
-        <option>K1</option>
-        <option>K2</option>
-        <option>K3</option>
-        <option>K4</option> 
+        <option>Kaolack</option>
+        <option>Guinguinéo</option>
+        <option>Nioro du Rip</option>
        </select> 
  </div>
  <div class="form-group"  id="zig" >
         {!! Form::label('ville', 'Ville') !!}
         <select class="form-control m-bot15" name="ville">
-        <option>Z1</option>
-        <option>Z2</option>
-        <option>Z3</option>
-        <option>Z4</option> 
+        <option>Ziguinchor</option>
+        <option>Bignona</option>
+        <option>Oussouye</option>
        </select> 
+ </div>
  </div>
 <!-----------------------------------ville-fin--------------------------->    
 
@@ -162,11 +158,11 @@
 
 <div class="form-group">
         {!! Form::label('adressed', 'Adresse Domicile') !!}
-        {!! Form::text('adressed', null, ['class' => 'form-control']); !!}
+        {!! Form::text('adressed', null, ['required','class' => 'form-control']); !!}
 </div>
 <div class="form-group">
         {!! Form::label('adressea', 'Adresse Entreprise ou Atelier') !!}
-        {!! Form::text('adressea', null, ['class' => 'form-control']); !!}
+        {!! Form::text('adressea', null, ['required','class' => 'form-control']); !!}
 </div>
 <div class="form-group">
         {!! Form::label('nf', 'Niveau langue francaise') !!}
@@ -194,11 +190,11 @@
 </div>
 <div class="form-group">
         {!! Form::label('nin', "Numero d'identité national") !!}
-        {!! Form::text('nin', null, ['class' => 'form-control']); !!}
+        {!! Form::text('nin', null, ['required','class' => 'form-control']); !!}
 </div>
 <div class="form-group">
         {!! Form::label('nd', 'Intitule du dernier diplome obtenu') !!}
-        {!! Form::text('nd', null, ['class' => 'form-control']); !!}
+        {!! Form::text('nd', null, ['required','class' => 'form-control']); !!}
 </div>
   
 
@@ -248,13 +244,22 @@
 </script>
 
 <script>
-    $('#dakar').hide();
-    $('#thies').hide();
-    $('#louga').hide();
-    $('#saint').hide();
-    $('#fatick').hide();
-    $('#kaolack').hide();
-    $('#zig').hide();
+$( document ).ready(function() {
+        $('#dakar').hide();
+        $('#thies').hide();
+        $('#louga').hide();
+        $('#saint').hide();
+        $('#fatick').hide();
+        $('#kaolack').hide();
+        $('#zig').hide();
+   
+});
+
+// $(window).on('load', function(){
+//         alert( "ready!" );
+// });
+
+   
 
 
 $('#n').click(function(){

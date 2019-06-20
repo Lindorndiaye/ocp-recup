@@ -1,190 +1,217 @@
-@extends('templates.master')
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+    <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+        <!--<![endif]-->
+        <head>
+            <!-- Basic Page Needs -->
+            <meta charset="utf-8">
+            <!--[if IE]>
+            <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+            <![endif]-->
+            <title>OCP</title>
+            <!-- Bootstrap  -->
+            <link rel="stylesheet" type="text/css" rel="stylesheets" href="{{asset('css/bootstrap.css')}}">
+            <!-- Theme Style -->
+            <link rel="stylesheet" type="text/css" rel="stylesheets" href="{{asset('css/formu.css')}}">
+            <link href="stylesheets/magic-check.css" rel="stylesheet">
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('assetss/ico/apple-touch-icon-144-precomposed.png')}}">
 
-@section('content')
-
-
-    <h2>Ajouter un Enseignant</h2>
-    <hr/>
-    <a class="btn btn-primary" href="/enseignants" style="margin-bottom: 15px;">Revenir à la liste</a>
-    
-    
+        <!-- CSS Global -->
+       
+        </head>
+        <body style="margin:0; font-family: Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji";>
+           
+        <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav" style="padding-top:20px; background-color:white;">
+    <div class="container" style="width:960px; margin:auto">
+    <div style="font-size:25px; padding-top:5px; padding-bottom:25px;" class="logo-title  wow fadeInUp" data-wow-delay="0.8s" > <a href="/"><a href="/"> <img src="{{asset('/img/Logo_OIF.jpg')}}" alt="" style="width:120px;"> </a><span style="font-size:25px; color:green;" class="fa  fa-calendar"></span> </a> </div>                                
      
-    
-    <form method="post" action="{{route('enseignants.store')}}" enctype="multipart/form-data" style="width:350px; text-align:center; margin-left:430px;">
-
-  {{csrf_field()}}
-   <div class="form-group" >
-        {!! Form::label('prenom', 'Prenom'); !!}  
-        {!! Form::text('prenom', null, ['class' => 'form-control']); !!}
+     
     </div>
-    <div class="form-group">
-        {!! Form::label('nom', 'Nom'); !!}
-        {!! Form::text('nom', null, ['class' => 'form-control']); !!}
-    </div>
-    <div class="form-group">
-        {!! Form::label('age', 'Age'); !!}
-        {!! Form::text('age', null, ['class' => 'form-control']); !!}
-    </div>
-    <div class="form-group">
-        {!! Form::label('mobile', 'Telephone'); !!}
-        {!! Form::text('mobile', null, [ 'class' => 'form-control']); !!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::label('email', 'Email') !!}
-        {!! Form::email('email', null, ['class' => 'form-control']); !!}
-    </div>
-      
-    <div class="form-group">
-        {!! Form::label('region', 'Région'); !!}
-       
-    <select class="form-control m-bot15" name="region" id="region">
-      <option id="n">-- --</option>
-      <option id="d">Dakar</option> 
-      <option id="t">Thies</option>  
-      <option id="l">Louga</option> 
-      <option id="s">Saint-louis</option>  
-      <option id="f">Fatick</option>
-      <option id="k">Kaolack</option>
-      <option id="z">Ziguinchor</option>
-     </select>
-</div>
-<!-----------------------------------ville---------------------------->
-<div class="form-group"  id="dakar" >
-        {!! Form::label('ville', 'Ville') !!}
-        <select class="form-control m-bot15" name="ville">
-        <option>D1</option>
-        <option>D2</option>
-        <option>D3</option>
-        <option>D4</option> 
-       </select> 
- </div>
- <div class="form-group"  id="thies" >
-        {!! Form::label('ville', 'Ville') !!}
-        <select class="form-control m-bot15" name="ville">
-        <option>T1</option>
-        <option>T2</option>
-        <option>T3</option>
-        <option>T4</option> 
-       </select> 
- </div>
- <div class="form-group"  id="louga" >
-        {!! Form::label('ville', 'Ville') !!}
-        <select class="form-control m-bot15" name="ville">
-        <option>L1</option>
-        <option>L2</option>
-        <option>L3</option>
-        <option>L4</option> 
-       </select> 
- </div>
- <div class="form-group"  id="saint" >
-        {!! Form::label('ville', 'Ville') !!}
-        <select class="form-control m-bot15" name="ville">
-        <option>S1</option>
-        <option>S2</option>
-        <option>S3</option>
-        <option>S4</option> 
-       </select> 
- </div>
- <div class="form-group"  id="fatick" >
-        {!! Form::label('ville', 'Ville') !!}
-        <select class="form-control m-bot15" name="ville">
-        <option>F1</option>
-        <option>F2</option>
-        <option>F3</option>
-        <option>F4</option> 
-       </select> 
- </div>
- <div class="form-group"  id="kaolack" >
-        {!! Form::label('ville', 'Ville') !!}
-        <select class="form-control m-bot15" name="ville">
-        <option>K1</option>
-        <option>K2</option>
-        <option>K3</option>
-        <option>K4</option> 
-       </select> 
- </div>
- <div class="form-group"  id="zig" >
-        {!! Form::label('ville', 'Ville') !!}
-        <select class="form-control m-bot15" name="ville">
-        <option>Z1</option>
-        <option>Z2</option>
-        <option>Z3</option>
-        <option>Z4</option> 
-       </select> 
- </div>
-<!-----------------------------------ville-fin--------------------------->   
-   <div class="form-group">
-        {!! Form::label('renseigner votre derniere diplome', 'Renseigner votre derniere Diplôme'); !!}
-       
-    <select class="form-control m-bot15" name="deniere_diplome">
+  </nav>
         
-      <option>CAEM</option> 
-      <option>CAES</option>  
-      <option>Doctorat</option> 
-     
-     </select>
-</div>
-<div class="form-group" >
-        {!! Form::label('combien d année d expérience', 'Combien d année d expérience'); !!}
-       
-        {!! Form::text('année_exper', null, ['class' => 'form-control']); !!}
+        <div class="container" style="width:960px; margin:auto; ">
+        <h6> @if (session('message'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('message') }}
+                        </div>
+                    @endif</h6>
+            <h1 class="bg-info text-white text-center p-2 fixed-top"></h1>
+            <main class="content" role="content" style="margin-top:-70px;">
+                <section id="section1">
+                    <div class="container-fluid col-md-6 col-md-offset-3">
+                        <!-- MultiStep Form -->
+                        <form id="regForm" method="post" action="{{route('entreprise.ajouter')}}" enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                            <h1>Formulaire pour la candidature des professeurs</h1>
+                            <!-- One "tab" for each step in the form: -->
+                            <div class="tab">
+                                <div class="titre">Prénom:</div>
+                                <p><input placeholder="Prénom" oninput="this.className = ''" name="prenom" required></p>
+                                <div class="titre">Nom:</div>
+                                <p><input placeholder="Nom" oninput="this.className = ''" name="nom" required></p>
+                                <div class="titre">Age:</div>
+                                <p><input placeholder="Age" oninput="this.className = ''" name="age" required></p>
+                                <div class="titre">Téléphone:</div>
+                                <p><input placeholder="téléphone" oninput="this.className = ''" name="mobile" required></p>
+                                <div class="titre">Email:</div>
+                                <p><input type="email" placeholder="exemple@...." oninput="this.className = ''" name="email" required></p>
+                                <p>
+                                <div class="titre">Région:</div>
+                                    <select name="region" id="region" required>
+                                        <option selected>--Selectionner région--: </option>
+                                        <option id="d" >Dakar</option> 
+                                        <option id="t">Thies</option>  
+                                        <option id="l">Louga</option> 
+                                        <option id="s">Saint-louis</option>  
+                                        <option id="f">Fatick</option>
+                                        <option id="k">Kaolack</option>
+                                        <option id="z">Ziguinchor</option>
 
-</div>
+                                    </select>
+                                </p>
 
-<div class="form-group" >
-        {!! Form::label('Avez-vous une expérience en fos, fle, français professionel: oui ou non', 'Avez-vous une expérience en FOS, FLE, Français professionel: Oui ou Non'); !!}
-       <div style="display:flex; margin-left:120px;">
-     <p> Oui:<input type="radio" style="width:25px" id="ocp" name="experience" class="myfrm form-control" value="Oui"></p>
-      <p style="margin-left:20px;"> Non:<input type="radio"  style="width:25px" ocp="opc" name="experience" class="myfrm form-control" Value="Non"></p>
-       </div>
-</div>
+                                <p>
+                                <div class="titre">Ville:</div>
+                                    <select name="ville"  id="dakar" required>
+                                        <option selected>--Selectionner ville--: </option>
+                                        <option>Dakar</option>
+                                        <option>Pikine</option>
+                                        <option>Guediawaye</option>
+                                        <option>Rufisque</option> 
+                                    </select>  
+                                    <select name="ville"  id="thies" required>
+                                        <option selected>--Selectionner ville--: </option>
+                                        <option>Thies</option>
+                                        <option>Mbour</option>
+                                        <option>Tivaouane</option> 
+                                    </select> 
+                                    <select name="ville"  id="louga" required>
+                                        <option selected>--Selectionner ville--: </option>
+                                        <option>Louga</option>
+                                        <option>Kebemer</option>
+                                        <option>Linguere</option> 
+                                    </select>   
+                                    <select name="ville"  id="saint" required>
+                                        <option selected>--Selectionner ville--: </option>
+                                        <option>Saint-Louis</option>
+                                        <option>Dagana</option>
+                                        <option>Podor</option>
+                                    </select> 
+                                    <select name="ville"  id="fatick" required>
+                                        <option selected>--Selectionner ville--: </option>
+                                        <option>Fatick</option>
+                                        <option>Foundiougne</option>
+                                        <option>Gossas</option>
+                                    </select> 
+                                    <select name="ville"  id="kaolack" required>
+                                        <option selected>--Selectionner ville--: </option>
+                                        <option>Kaolack</option>
+                                        <option>Guinguinéo</option>
+                                        <option>Nioro du Rip</option>
+                                    </select>
+                                    <select name="ville"  id="zig" required>
+                                        <option selected>--Selectionner ville--: </option>
+                                        <option>Ziguinchor</option>
+                                        <option>Bignona</option>
+                                        <option>Oussouye</option>
+                                    </select>      
 
-    <div class="form-group" >
-{!! Form::label('numéro de la carte d identité national', 'Numéro de la carte d identité national'); !!}
+                                </p>
 
-<input type="number" name="num_cni" class="myfrm form-control"><br>
+                                <p>
+                                <div class="titre">Renseigner votre dernier Diplôme:</div>
+                                    <select name="deniere_diplome" required>
+                                        <option selected>--Selectionner votre dernier Diplôme--: </option>
+                                        <option>CAEM</option> 
+                                        <option>CAES</option>  
+                                        <option>Doctorat</option>
 
+                                    </select>
+                                </p>
+                                <p>
+                                  <div class="titre"> <label>Votre établissement en 2019/2020:</label></div>
+                                <input class="form-control"  name="ecole" placeholder="Votre établissement en 2019/2020" value="" autocomplete="ecole" autofocus="">
+                                </p>
 
-</div>
-
-<div class="form-group">
-{!! Form::label('votre cv en pdf', 'Votre CV en PDF'); !!}
-        <input type="file" name="cv_file" class="myfrm form-control">
-    </div>
-
-
-
-    
-
-   
-   <button type="submit" class="btn btn-success" style="margin-top:10px">S'inscrire</button>
-    </form>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-    <script>
+                                <p>
+                                  <div class="titre"> <label>Ville ou commune de votre établissement:</label></div>
+                                <input class="form-control"  name="localite" placeholder="Ville ou commune de votre établissement" value="" autocomplete="localite" autofocus="">
+                                </p>
 
 
-  $(".btn-success").click(function(){ 
+                                <div class="titre"> <label>Combien d'années d'expérience:</label></div>
+                                <p><input placeholder="année d expérience" oninput="this.className = ''" name="année_exper" required></p>
 
-      var lsthmtl = $(".clone").html();
+                                
 
-      $(".increment").after(lsthmtl);  
+                                <div class="titre">Avez-vous une expérience en FOS, FLE, Français professionel: Oui ou Non</div>
+                                <p>
+                                <div class="radio">
+                                   <input style="width: auto; margin-bottom: 15px;" type="radio" name="experience" class="check" value="Oui">Oui <br>
+                                    <input style="width: auto; margin-bottom: 15px;" type="radio" name="experience" value="Non">Non<br>
+                                   
+                                </div>
+                                </p>
+                                <div class="titre"> <label>Numéro de la carte d'identité nationale:</label></div>
+                                <p><input type="number" placeholder="Numéro de la carte d identité national" oninput="this.className = ''" name="num_cni" required></p>
+                                
+                                <div class="titre"> <label>Votre CV en PDF:</label></div>
+                                <p><input type="file" oninput="this.className = ''" name="cv_file" required></p>
 
-  });
-
-  $("body").on("click",".btn-danger",function(){ 
-
-     
-      $('#removed').remove();
-
-  });
+                                <hr>
 
 
-</script>
+                            </div>
+  
+                            <div style="overflow:auto;">
+                                <div style="float:right;">
+                                    <button id="ok" type="submit" >S'inscrire</button>
+                                </div>
+                            </div>
+                            <!-- Circles which indicates the steps of the form: -->
+                            <div style="text-align:center;margin-top:40px;">
+                                
+                          </div>
 
-<script>
+                        </form>
+                        <!-- /.MultiStep Form -->
+                    </div>
+                </section>
+            </main>
+            <!-- /content -->
+            <!-- alerts are for fun of it -->
+            <div class="alerts-container">
+                <div class="row">
+                    <div id="timed-alert" class="alert alert-info animated tada" role="alert">
+                        <span id="time"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="click-alert" class="alert alert-warning" role="alert">
+                    </div>
+                </div>
+            </div>
+            </div>
+            <script src="{{asset('js/formu.js')}}"></script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142287871-1"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-142287871-1');
+            </script>
+
+            <script>
+
+
     $('#dakar').hide();
     $('#thies').hide();
     $('#louga').hide();
@@ -193,15 +220,6 @@
     $('#kaolack').hide();
     $('#zig').hide();
 
-$('#n').click(function(){
-        $('#dakar').hide();
-        $('#thies').hide();
-        $('#louga').hide();
-        $('#saint').hide();
-        $('#fatick').hide();
-        $('#kaolack').hide();
-        $('#zig').hide();
-});
 $('#d').click(function(){
         $('#dakar').show();
         $('#thies').hide();
@@ -265,10 +283,17 @@ $('#z').click(function(){
         $('#kaolack').hide();
         $('#zig').show();
 });
+$('#ok').click(function(){
+  alert("Nous vous remercions d'avoir rempli notre formulaire.
+Nous vous contacterons dans les plus brefs délais.");
+});
 
 
-</script>
-@endsection()
+
+            
+        </body>
+    </html>
+
 	
 	
 	

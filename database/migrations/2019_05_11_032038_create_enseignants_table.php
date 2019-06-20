@@ -27,6 +27,8 @@ class CreateEnseignantsTable extends Migration
             $table->string('experience');
             $table->string('num_cni');
             $table->string('cv_file');
+            $table->string('veta');   
+            $table->string('leta');          
             $table->timestamps();
         });
     }

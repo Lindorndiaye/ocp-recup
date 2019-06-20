@@ -2,10 +2,10 @@
 
 <?php $__env->startSection('content'); ?>
 
+
     <h2>Read Data</h2>
     <hr/>  
-<!-- <a class="btn btn-primary" href="generate-pdf" style="margin-bottom: 15px; float:right">contrat</a> -->
-
+<a class="btn btn-primary" href="/home" style="margin-bottom: 15px; float:right">Retour</a> 
     <a class="btn btn-primary" href="enseignants/create" style="margin-bottom: 15px;">Ajouter un Enseignant</a>
 
     <?php if(Session::has('message')): ?>
@@ -13,7 +13,7 @@
         <p><?php echo Session('message'); ?></p>
     </div>
     <?php endif; ?>
-    
+   
 
     
     <!-- Begin page -->
@@ -115,9 +115,9 @@
                 <td style="font-size:12px;">
                     <a class="btn btn-success btn-sm" href="enseignants/<?php echo $Enseignant->id; ?>/edit">Modifier</a>
                     
-                    <?php echo Form::open(['id' => 'deleteForm', 'method' => 'DELETE', 'url' => '/enseignants/' . $Enseignant->id]); ?>
+                    <!-- <?php echo Form::open(['id' => 'deleteForm', 'method' => 'DELETE', 'url' => '/enseignants/' . $Enseignant->id]); ?>
 
-                    <?php echo Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']); ?> 
+                    <?php echo Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']); ?>  -->
                     <?php echo Form::close(); ?>
 
                 </td>

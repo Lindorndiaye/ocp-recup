@@ -2,11 +2,11 @@
 
 <?php $__env->startSection('content'); ?>
 
-
+<!-- 
     <h2>Ajouter un Enseignant</h2>
     <hr/>
     <a class="btn btn-primary" href="/enseignants" style="margin-bottom: 15px;">Revenir à la liste</a>
-    
+     -->
     
      
     
@@ -14,34 +14,35 @@
 
   <?php echo e(csrf_field()); ?>
 
+  <h1>Formulaire pour la candidature des professeurs</h1><br>
    <div class="form-group" >
         <?php echo Form::label('prenom', 'Prenom');; ?>  
-        <?php echo Form::text('prenom', null, ['class' => 'form-control']);; ?>
+        <?php echo Form::text('prenom', null, ['required','class' => 'form-control']);; ?>
 
     </div>
     <div class="form-group">
         <?php echo Form::label('nom', 'Nom');; ?>
 
-        <?php echo Form::text('nom', null, ['class' => 'form-control']);; ?>
+        <?php echo Form::text('nom', null, ['required','class' => 'form-control']);; ?>
 
     </div>
     <div class="form-group">
         <?php echo Form::label('age', 'Age');; ?>
 
-        <?php echo Form::text('age', null, ['class' => 'form-control']);; ?>
+        <?php echo Form::text('age', null, ['required','class' => 'form-control']);; ?>
 
     </div>
     <div class="form-group">
         <?php echo Form::label('mobile', 'Telephone');; ?>
 
-        <?php echo Form::text('mobile', null, [ 'class' => 'form-control']);; ?>
+        <?php echo Form::text('mobile', null, ['required','class' => 'form-control']);; ?>
 
     </div>
 
     <div class="form-group">
         <?php echo Form::label('email', 'Email'); ?>
 
-        <?php echo Form::email('email', null, ['class' => 'form-control']);; ?>
+        <?php echo Form::email('email', null, ['required','class' => 'form-control']);; ?>
 
     </div>
       
@@ -65,70 +66,64 @@
         <?php echo Form::label('ville', 'Ville'); ?>
 
         <select class="form-control m-bot15" name="ville">
-        <option>D1</option>
-        <option>D2</option>
-        <option>D3</option>
-        <option>D4</option> 
+        <option>Dakar</option>
+        <option>Pikine</option>
+        <option>Guediawaye</option>
+        <option>Rufisque</option> 
        </select> 
  </div>
  <div class="form-group"  id="thies" >
         <?php echo Form::label('ville', 'Ville'); ?>
 
         <select class="form-control m-bot15" name="ville">
-        <option>T1</option>
-        <option>T2</option>
-        <option>T3</option>
-        <option>T4</option> 
+        <option>Thies</option>
+        <option>Mbour</option>
+        <option>Tivaouane</option>
        </select> 
  </div>
  <div class="form-group"  id="louga" >
         <?php echo Form::label('ville', 'Ville'); ?>
 
         <select class="form-control m-bot15" name="ville">
-        <option>L1</option>
-        <option>L2</option>
-        <option>L3</option>
-        <option>L4</option> 
+        <option>Louga</option>
+        <option>Kebemer</option>
+        <option>Linguere</option>
        </select> 
  </div>
  <div class="form-group"  id="saint" >
         <?php echo Form::label('ville', 'Ville'); ?>
 
         <select class="form-control m-bot15" name="ville">
-        <option>S1</option>
-        <option>S2</option>
-        <option>S3</option>
-        <option>S4</option> 
+        <option>Saint-Louis</option>
+        <option>Dagana</option>
+        <option>Podor</option> 
        </select> 
  </div>
  <div class="form-group"  id="fatick" >
         <?php echo Form::label('ville', 'Ville'); ?>
 
         <select class="form-control m-bot15" name="ville">
-        <option>F1</option>
-        <option>F2</option>
-        <option>F3</option>
-        <option>F4</option> 
+        <option>Fatick</option>
+        <option>Foundiougne</option>
+        <option>Gossas</option>
        </select> 
  </div>
  <div class="form-group"  id="kaolack" >
         <?php echo Form::label('ville', 'Ville'); ?>
 
         <select class="form-control m-bot15" name="ville">
-        <option>K1</option>
-        <option>K2</option>
-        <option>K3</option>
-        <option>K4</option> 
+        <option>Kaolack</option>
+        <option>Guinguinéo</option>
+        <option>Nioro du Rip</option>
        </select> 
  </div>
  <div class="form-group"  id="zig" >
         <?php echo Form::label('ville', 'Ville'); ?>
 
         <select class="form-control m-bot15" name="ville">
-        <option>Z1</option>
-        <option>Z2</option>
-        <option>Z3</option>
-        <option>Z4</option> 
+        <option>Ziguinchor</option>
+        <option>Bignona</option>
+        <option>Oussouye</option>
        </select> 
  </div>
 <!-----------------------------------ville-fin--------------------------->   
@@ -148,7 +143,7 @@
         <?php echo Form::label('combien d année d expérience', 'Combien d année d expérience');; ?>
 
        
-        <?php echo Form::text('année_exper', null, ['class' => 'form-control']);; ?>
+        <?php echo Form::text('année_exper', null, ['required','class' => 'form-control']);; ?>
 
 
 </div>
@@ -174,7 +169,7 @@
 <div class="form-group">
 <?php echo Form::label('votre cv en pdf', 'Votre CV en PDF');; ?>
 
-        <input type="file" name="cv_file" class="myfrm form-control">
+        <input required type="file" name="cv_file" class="myfrm form-control">
     </div>
 
 
@@ -182,7 +177,7 @@
     
 
    
-   <button type="submit" class="btn btn-success" style="margin-top:10px">S'inscrire</button>
+   <button type="submit" class="btn btn-success" style="margin-top:10px" id="ok">S'inscrire</button>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -209,6 +204,7 @@
 </script>
 
 <script>
+
     $('#dakar').hide();
     $('#thies').hide();
     $('#louga').hide();
@@ -216,6 +212,7 @@
     $('#fatick').hide();
     $('#kaolack').hide();
     $('#zig').hide();
+
 
 $('#n').click(function(){
         $('#dakar').hide();
@@ -289,9 +286,17 @@ $('#z').click(function(){
         $('#kaolack').hide();
         $('#zig').show();
 });
-
+$('#ok').click(function(){
+  alert("Nous vous remercions d'avoir rempli notre formulaire. Nous vous contacterons dans les plus brefs délais.");
+}); 
 
 </script>
+<style>
+body {
+ background-image: src="images/logo.jpeg";
+
+}
+</style>
 <?php $__env->stopSection(); ?>
 	
 	
